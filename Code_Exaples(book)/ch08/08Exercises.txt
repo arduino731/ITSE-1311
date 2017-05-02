@@ -1,0 +1,44 @@
+Exercises Javascript: Control Statements II
+
+8.4 Find the error in each of the following segments of code. [Note: There may be more than one error.] 
+a) For ( x = 100, x >= 1, ++x ) document.writeln( x ); 
+b) The following code should print whether integer value is odd or even: switch ( value % 2 ) { case 0: document.writeln( "Even integer" ); case 1: document.writeln( "Odd integer" ); } 
+c) The following code should output the odd integers from 19 to 1: for ( x = 19; x >= 1; x += 2 ) document.writeln( x ); d) The following code should output the even integers from 2 to 100: counter = 2; do { document.writeln( counter ); counter += 2; } While ( counter < 100 ); 
+
+8.5 What does the following script do?
+1 <!DOCTYPE html>
+2 3 <!-- Exercise 8.5: ex08_05.html --> 
+4 <html>
+5 <head> 
+6 <meta charset = "utf-8"> 
+7 <title>Mystery</title> 
+8 <script> 
+9 
+10 document.writeln( "<table>" ); 
+11 12 for ( var i = 1; i <= 7; i++ ) 
+13 { 14 document.writeln( "<tr>" ); 
+15 16 for ( var j = 1; j <= 5; j++ ) 
+17 document.writeln( "<td>(" + i + ", " + j + ")</td>" ); 1
+8 19 document.writeln( "</tr>" ); 
+20 } // end for 
+21 22 document.writeln( "</table>" ); 
+23 24 </script> 
+25 </head><body
+
+
+
+8.6 Write a script that finds the smallest of several nonnegative integers. Assume that the first value read specifies the number of values to be input from the user. 
+
+8.7 Write a script that calculates the product of the odd integers from 1 to 15, then outputs HTML5 text that displays the results. 
+
+8.8 Modify the compound interest program in Fig. 8.6 to repeat its steps for interest rates of 5, 6, 7, 8, 9 and 10 percent. Use a for statement to vary the interest rate. Use a separate table for each rate. 
+
+8.9 One interesting application of computers is drawing graphs and bar charts (sometimes called histograms). Write a script that reads five numbers between 1 and 30. For each number read, output HTML5 text that displays a line containing the same number of adjacent asterisks. For example, if your program reads the number 7, it should output HTML5 text that displays *******. 
+
+8.10 (“The Twelve Days of Christmas” Song) Write a script that uses repetition and a switch structures to print the song “The Twelve Days of Christmas.” You can find the words at the site www.santas.net/twelvedaysofchristmas.htm 
+
+8.11 A mail-order house sells five different products whose retail prices are as follows: product 1, $2.98; product 2, $4.50; product 3, $9.98; product 4, $4.49; and product 5, $6.87. Write a script that reads a series of pairs of numbers as follows: a) Product number b) Quantity sold for one day Your program should use a switch statement to determine each product’s retail price and should calculate and output HTML5 that displays the total retail value of all the products sold last week. Use a prompt dialog to obtain the product number and quantity from the user. Use a sentinel-controlled loop to determine when the program should stop looping and display the final results. 
+
+8.12 Assume that i = 1, j = 2, k = 3 and m = 2. What does each of the given statements print? Are the parentheses necessary in each case? a) document.writeln( i == 1 ); b) document.writeln( j == 3 ); c) document.writeln( i >= 1 && j < 4 ); d) document.writeln( m <= 99 && k < m ); e) document.writeln( j >= i || k == m ); f) document.writeln( k + m < j || 3 - j >= k ); g) document.writeln( !( k > m ) );
+
+

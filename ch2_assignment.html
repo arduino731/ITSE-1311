@@ -1,0 +1,167 @@
+<!-- 
+2.16 A local university has asked you to create an HTML5 document that allows prospective college students to provide feedback about their campus visit. Your HTML5 document should contain a form with text fields for a name and e-mail. Provide checkboxes that allow prospective students to indicate what they liked most about the campus. The checkboxes should include: campus, students, location, atmosphere, dorm rooms and sports. Also, provide radio buttons that ask the prospective students how they became interested in the college. Options should include: friends, television, Internet and other. In addition, provide a text area for additional comments, a submit button and a reset button. Use post to sent the information in the form to http://www.deitel.com.
+
+ -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset = "utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Website Font style -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<!-- <link rel="stylesheet" href="style.css"> -->
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+    <title>local university</title>
+    <style>
+    	.main-background{
+ 	background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+	.main-center{
+ 	margin-top: 30px;
+ 	margin: 0 auto;
+ 	max-width: 400px;
+    padding: 10px 40px;
+	background:#009edf;
+	    color: #FFF;
+    text-shadow: none;
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.31);
+
+}
+.form-control{
+    width: 79%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.btn3d {
+    position:relative;
+    top: -6px;
+    border:0;
+     transition: all 20ms linear;
+     margin-top:10px;
+     margin-bottom:10px;
+     margin-left:2px;
+     margin-right:2px;
+}
+.btn3d:active:focus,
+.btn3d:focus:hover,
+.btn3d:focus {
+    -moz-outline-style:none;
+         outline:medium none;
+}
+.btn3d:active, .btn3d.active {
+    top:2px;
+}
+.btn3d.btn-primary {
+    box-shadow:0 0 0 1px #417fbd inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #4D5BBE, 0 8px 8px 1px rgba(0,0,0,0.5);
+    background-color:#4274D7;
+}
+.btn3d.btn-primary:active, .btn3d.btn-primary.active {
+    box-shadow:0 0 0 1px #417fbd inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
+    background-color:#4274D7;
+}
+.btn3d.btn-danger {
+    box-shadow:0 0 0 1px #b93802 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #AA0000, 0 8px 8px 1px rgba(0,0,0,0.5);
+    background-color:#D73814;
+}
+.btn3d.btn-danger:active, .btn3d.btn-danger.active {
+    box-shadow:0 0 0 1px #b93802 inset, 0 0 0 1px rgba(255,255,255,0.15) inset, 0 1px 3px 1px rgba(0,0,0,0.3);
+    background-color: #D73814;
+}
+
+    </style>
+   </head>
+
+   <body>
+   	<div class="container">
+   		<div class="row main">
+   		<div class="main-background main-center">
+      <h1 style="margin:auto; text-align:center;">Local University</h1>
+      <form method = "post" action = "http://www.deitel.com">
+         <!-- hidden inputs contain non-visual -->
+         <!-- information that will also be submitted -->
+         <input type = "hidden" name = "recipient"
+            value = "deitel@deitel.com">
+         <input type = "hidden" name = "subject" 
+            value = "Feedback Form">
+         <input type = "hidden" name = "redirect" 
+            value = "main.html"> 
+
+         <!-- <input type = "text"> inserts a text field -->
+         	<div class="form-group">
+				<label for="name" class="cols-sm-2 control-label">Your Name:</label>
+				<div class="cols-sm-10">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+						<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+					</div>
+				</div>
+			</div>
+			<hr>
+         	<div class="form-group">
+				<label for="email" class="cols-sm-2 control-label">Your Email</label>
+				<div class="cols-sm-10">
+					<div class="input-group">
+						<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+						<input type="text" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+					</div>
+				</div>
+			</div>
+			<hr>
+            <p>
+            	<label>What you liked most about the campus: (checked all) <br>
+	               	<input name = "campus" type = "checkbox">campus<br>
+	               	<input name = "students" type = "checkbox">students<br>
+	               	<input name = "location" type = "checkbox">location<br>
+	               	<input name = "atmosphere" type = "checkbox">atmosphere<br> 
+	               	<input name = "dorm rooms" type = "checkbox">dorm rooms<br> 
+	               	<input name = "sports" type = "checkbox">sports<br> 
+            	</label>
+            </p>
+  			<p>
+            	<label>How do you became interested in the college?  <br>
+	               	<input name = "friends" type = "radio">friends<br>
+	               	<input name = "television" type = "radio">television<br>
+	               	<input name = "Internet" type = "radio">Internet<br>
+	               	<input name = "other" type = "radio">other<br> 
+            	</label>
+            </p>
+            <div class="form-group">
+            	<label>Additional comments:</label> <br>
+	               	<textarea class="form-control" name = "comments" type = "text" rows="4">
+	               	</textarea>
+            </div>
+         <p>
+            <!-- input types "submit" and "reset" insert -->
+            <!-- buttons for submitting and clearing the -->
+            <!-- form's contents, respectively -->
+            <input type = "submit" value = "Submit" class="btn btn-danger btn-lg btn3d" >
+            <input type = "reset" value = "Clear" class="btn btn-primary btn-lg btn3d">
+         </p>   
+      </form>
+	</div>
+	</div>
+	</div>
+   </body>
+</html>

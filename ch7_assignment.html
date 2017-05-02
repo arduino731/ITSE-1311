@@ -1,0 +1,47 @@
+<!-- Chapter 7 Assignment
+ Submit Assignment
+Due Mar 6 by 11:59pm  Points 100  Submitting a text entry box or a file upload Available after Feb 6 at 7am
+Question 7.22 on Page 250.
+
+A company wants to transmit data over the telephone...
+
+A company wants to transmit data over the telephone, but it’s concerned that its phones may be tapped. All of its data is transmitted as four-digit integers. It has asked you to write a script that will encrypt its data so that the data may be transmitted more securely. Your script should read a four-digit integer entered by the user in a prompt dialog and encrypt it as follows: Replace each digit by (the sum of that digit plus 7) modulus 10. Then swap the first digit with the third, and swap the second digit with the fourth. Then output HTML5 text that displays the encrypted integer. -->
+
+
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Encrypt Four Digit Integers</title>
+      <script type="text/javascript">
+
+      	var digit1;
+		var digit2;
+		var digit3;
+		var digit4;
+		var inputString;
+		var encryptedNum;
+
+		// Ask user to enter 4 digit to be encrypted
+		inputString = prompt("Please enter a 4 digit number");
+
+		var number = parseInt(inputString , 10 );
+		console.log(number);
+
+		digit1 = parseInt((number / 1000 + 7) % 10);
+		digit2 = parseInt((number % 1000 / 100 + 7) % 10);
+		digit3 = parseInt((number % 1000 % 100 / 10 + 7) % 10);
+		digit4 = parseInt((number % 1000 % 100 / 100 + 7) % 10);
+
+		console.log(digit1);
+		console.log(digit2);
+		console.log(digit3);
+		console.log(digit4);
+        
+		encryptedNum = "The encrypted number is " + digit1 + digit2 + digit3 + digit4;
+		document.write("<br>" + encryptedNum);
+
+      </script>
+   </head><body></body>
+</html> 

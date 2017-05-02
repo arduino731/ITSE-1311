@@ -1,0 +1,68 @@
+<!-- Chapter 10 Assignment - II
+ Submit Assignment
+Due Apr 24 by 11:59pm  Points 100  Submitting a text entry box or a file upload Available after Apr 4 at 7am
+Question 10.12 on Page 356.
+
+Use a one-dimensional array to solve the following problem: 
+Read in 10 numbers, each of which is between 10 and 100. As each number is read, print it only if it’s not a duplicate of a number that has already been read. Provide for the “worst case,” in which all 10 numbers are different. Use the smallest possible array to solve this problem.
+
+<!DOCTYPE html> -->
+
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>One-dimensional array</title>
+		<style type = "text/css">
+			p { margin: 0; }
+		</style>
+	</head>
+	<script>
+
+	function start(){
+
+	var arr = new Array();
+	var input;
+	var i, j;
+	var output = document.getElementById( "output" ); // div to output arra
+
+	// get 10 nonduplicate numbers in the range between 10 and 100
+		for(i=0; i < 10 ; i++){
+			input = prompt( "Please enter a number between 10 and 100 (" + ( 10 - i ) + " remaining): ", "10" );
+			num = parseInt(input);
+
+			while( num < 10 || num > 100){
+				// Alert user of the error
+				alert( "You entered an invalid number!" );
+				// Prompt for number
+				num = prompt( "Please enter a number between 10 and 100 (" + ( 10 - i ) + " remaining): ", "10" );
+				// Convert user input string to int
+				num = parseInt( num );
+			} // End while	
+
+			if ( !searchArray( arr, num ) ){
+			
+				arr[ arr.length ] = num;
+				console.log(arr);
+			}
+
+			output.innerHTML = "Unique Numbers Entered: " + arr.join( " " );
+
+
+			function searchArray( theArray, key )
+			{
+				for ( var j = 0; j < theArray.length; j++ )
+					if ( theArray[ j ] == key )
+					return true;
+					
+				return false;
+			} // end funtion searchArray
+		}
+	}
+	</script>
+ 	<body onload = "start()">
+ 	<form action = "">
+		<div id = "output">Print here only if it’s not a duplicate of a number:</div>
+	</form>
+		
+	</body>
+</html>

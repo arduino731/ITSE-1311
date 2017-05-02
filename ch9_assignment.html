@@ -1,0 +1,71 @@
+<!-- Due Apr 3 by 11:59pm  Points 100  Submitting a file upload Available after Mar 21 at 7am
+Question 9.18 on Page 321.  
+
+Write a function minimum3 that returns the smallest of three floating-point numbers. Use the Math.min function to implement minimum3. Incorporate the function into a script that reads three values from the user and determines the smallest value. -->
+
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Maximum of Three Values</title>
+      <style type = "text/css">
+         p { margin: 0; }
+      </style>
+      <script>
+
+         // var input1 = window.prompt( "Enter first number", "0" );
+         // var input2 = window.prompt( "Enter second number", "0" );
+         // var input3 = window.prompt( "Enter third number", "0" ); 
+   
+         // var value1 = parseFloat( input1 );
+         // var value2 = parseFloat( input2 );
+         // var value3 = parseFloat( input3 );
+   
+         // var minValue = minimum3( value1, value2, value3 );
+
+         // document.writeln( "<p>First number: " + value1 + "</p>" +
+         //    "<p>Second number: " + value2 + "</p>" +
+         //    "<p>Third number: " + value3 + "</p>" +
+         //    "<p>Minimum is: " + minValue + "</p>" );
+                                      
+
+         function minimum3( x, y, z )               
+         {                                         
+            return Math.min( x, y, z ) ;
+         }
+
+         function doCalculation(){
+				var x = parseFloat(document.getElementById("1number").value);
+				var y = parseFloat(document.getElementById("2number").value);
+				var z = parseFloat(document.getElementById("3number").value);
+				document.getElementById("result").innerHTML = minimum3(x, y, z);
+		  }   
+      </script>
+   </head>
+   		<body>
+		  <h1> Welcome to the program to calculate the smallest of three floating-point numbers</h1>
+		  <hr>
+		  <p>
+		  <table>
+			<tr>
+				<td>Enter first number:</td>
+				<td><input type="text" id="1number"></td>
+			</tr>
+			<tr>
+				<td>Enter second number:</td>
+				<td><input type="text" id="2number"></td>
+			</tr>
+			<tr>
+				<td>Enter thrid number:</td>
+				<td><input type="text" id="3number"></td>
+			</tr>
+			<tr>
+				<td>Minimum value:</td>
+				<td><b><label id="result"></b></td>
+			</tr>
+			</table>
+		  </p>
+		  <button onclick="doCalculation()">Calculate</button>
+		</body>
+</html>

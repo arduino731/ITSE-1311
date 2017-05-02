@@ -1,0 +1,67 @@
+Exercises  Javascript: Arrays
+10.6 Fill in the blanks in each of the following statements:
+a) JavaScript stores lists of values in . b) The names of the four elements of array p are , , and . c) In a two-dimensional array, by convention the first index identifies the of an element, and the second index identifies the of an element. d) An m-by-n array contains rows, columns and elements. e) The name the element in row 3 and column 5 of array d is . 
+
+10.7 State whether each of the following is true or false. If false, explain why. a) To refer to a particular location or element in an array, we specify the name of the array and the value of the element. b) A variable declaration reserves space for an array. c) To indicate that 100 locations should be reserved for integer array p, the programmer should write the declaration p[ 100 ]; d) A JavaScript program that initializes the elements of a 15-element array to zero must contain at least one for statement. e) A JavaScript program that totals the elements of a two-dimensional array must contain nested for statements. 
+
+10.8 Write JavaScript statements to accomplish each of the following tasks: 
+a) Display the value of the seventh element of array f. b) Initialize each of the five elements of one-dimensional array g to 8. c) Total the elements of array c, which contains 100 numeric elements. d) Copy 11-element array a into the first portion of array b, which contains 34 elements. e) Determine and print
+
+10.9 Consider a two-by-three array t that will store integers. 
+a) Write a statement that declares and creates array t. b) How many rows does t have? c) How many columns does t have? d) How many elements does t have? e) Write the names of all the elements in row 1 of t. f) Write the names of all the elements in the third column of t. g) Write a single statement that sets the element of t in row 1 and column 2 to zero. h) Write a series of statements that initializes each element of t to zero. Do not use a repetition statement. i) Write a nested for statement that initializes each element of t to zero. j) Write a series of statements that determines and prints the smallest value in array t. k) Write a nonrepetition statement that displays the elements of the first row of t. l) Write a series of statements that prints the array t in neat, tabular format. List the column indices as headings across the top, and list the row indices at the left of each row. 
+
+10.10 Use a one-dimensional array to solve the following problem: A company pays its salespeople on a commission basis. The salespeople receive $200 per week plus 9 percent of their gross sales for that week. For example, a salesperson who grosses $5000 in sales in a week receives $200 plus 9 percent of $5000, or a total of $650. Write a script (using an array of counters) that obtains the gross sales for each employee through an HTML5 form and determines how many of the salespeople earned salaries in each of the following ranges (assume that each salesperson’s salary is truncated to an integer amount):
+a) $200–299 b) $300–399 c) $400–499 d) $500–599 e) $600–699 f) $700–799 g) $800–899 h) $900–999 i) $1000 and over
+
+10.11 Write statements that perform the following operations for a one-dimensional array: a) Set the 10 elements of array counts to zeros. b) Add 1 to each of the 15 elements of array bonus. c) Display the five values of array bestScores, separated by spaces. 
+
+10.12 Use a one-dimensional array to solve the following problem: Read in 10 numbers, each of which is between 10 and 100. As each number is read, print it only if it’s not a duplicate of a number that has already been read. Provide for the “worst case,” in which all 10 numbers are different. Use the smallest possible array to solve this problem. 
+
+10.13 Label the elements of three-by-five two-dimensional array sales to indicate the order in which they’re set to zero by the following program segment:
+
+ for ( var row in sales ) {
+ for ( var col in sales[ row ] ) 
+{ sales[ row ][ col ] = 0; 
+}
+ }
+
+10.15 (Turtle Graphics) The Logo language, which is popular among young computer users, made the concept of turtle graphics famous. Imagine a mechanical turtle that walks around the room under the control of a JavaScript program. The turtle holds a pen in one of two positions, up or down. When the pen is down, the turtle traces out shapes as it moves; when the pen is up, the turtle moves about freely without writing anything. In this problem, you’ll simulate the operation of the turtle and create a computerized sketchpad as well. Use a 20-by-20 array floor that’s initialized to zeros. Read commands from an array that contains them. Keep track of the current position of the turtle at all times and of whether the pen is currently up or down. Assume that the turtle always starts at position (0, 0) of the floor, with its pen up. The set of turtle commands your script must process are as in Fig. 10.23. Suppose that the turtle is somewhere near the center of the floor. The following “program” would draw and print a 12-by-12 square, then leave the pen in the up position:
+
+Command Meaning
+1 Pen up 
+2 Pen down
+3 Turn right 
+4 Tu r n l e ft 
+5,10 Move forward 
+10 spaces (or a number other than 10) 
+6 Print the 20-by-20 array 
+9 End of data (sentinel)
+Fig. 10.23 | Turtle-graphics commands.
+
+2 
+5,12 
+3 
+5,12 
+3 
+5,12 
+3 
+5,12 
+1
+6
+9 
+As the turtle moves with the pen down, set the appropriate elements of array floor to 1s. When the 6 command (print) is given, display an asterisk or some other character of your choosing wherever there’s a 1 in the array. Wherever there’s a zero, display a blank. Write a script to implement the turtle-graphics capabilities discussed here. Write several turtle-graphics programs to draw interesting shapes. Add other commands to increase the power of your turtle-graphics language. 
+
+10.16 (The Sieve of Eratosthenes) A prime integer is an integer greater than 1 that’s evenly divisible only by itself and 1. The Sieve of Eratosthenes is an algorithm for finding prime numbers. It operates as follows: 
+a) Create an array with all elements initialized to 1 (true). Array elements with prime indices will remain as 1. All other array elements will eventually be set to zero. 
+b) Set the first two elements to zero, since 0 and 1 are not prime. Starting with array index 2, every time an array element is found whose value is 1, loop through the remainder of the array and set to zero every element whose index is a multiple of the index for the element with value 1. For array index 2, all elements beyond 2 in the array that are multiples of 2 will be set to zero (indices 4, 6, 8, 10, etc.); for array index 3, all elements beyond 3 in the array that are multiples of 3 will be set to zero (indices 6, 9, 12, 15, etc.); and so on. 
+When this process is complete, the array elements that are still set to 1 indicate that the index is a prime number. These indices can then be printed. Write a script that uses an array of 1000 elements to determine and print the prime numbers between 1 and 999. Ignore element 0 of the array.
+
+10.17 ((Simulation: The Tortoise and the Hare) In this problem, you’ll re-create one of the truly great moments in history, namely the classic race of the tortoise and the hare. You’ll use random number generation to develop a simulation of this memorable event. Our contenders begin the race at square 1 of 70 squares. Each square represents a possible position along the race course. The finish line is at square 70. The first contender to reach or pass square 70 is rewarded with a pail of fresh carrots and lettuce. The course weaves its way up the side of a slippery mountain, so occasionally the contenders lose ground. There’s a clock that ticks once per second. With each tick of the clock, your script should adjust the position of the animals according to the rules in Fig. 10.24.
+Animal		 Move type 		Percentage of the time 		Actual move 
+Tortoise 	Fast plod 		50% 					3 squares to the right         
+Slip 			20% 					6 squares to the left        
+Slow plod 		30% 					1 square to the right Fig. 10.24 | Rules for adjusting the position of the tortoise and the hare. (Part 1 of 2.)
+
+
+
+

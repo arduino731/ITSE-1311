@@ -1,0 +1,53 @@
+<!-- 
+6.21 Write a script that reads an integer and determines and outputs HTML5 text that displays whether it’s odd or even. [Hint: Use the remainder operator. An even number is a multiple of 2. Any multiple of 2 leaves a remainder of zero when divided by 2.]
+
+ -->
+<!DOCTYPE html>
+<!-- a script that reads an integer and determines output whether odd or even -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Website Font style -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+      <!-- <link rel="stylesheet" href="style.css"> -->
+      <!-- Google Fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <title>Ch6_assignment</title>
+      <style>
+      	body{
+		background: #ee0979; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to left, #ee0979 , #ff6a00); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to left, #ee0979 , #ff6a00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		}
+      </style>
+      <script>
+
+         // Calculate the product of three integers
+         var result;
+         var integer;
+
+         integer = window.prompt( "Enter first integer:" );
+
+         result = parseInt( integer , 10);
+
+		 console.log(result);
+
+		 if(result % 2 == 0){
+			console.log("even");
+			document.writeln( "<h1 class='text-center' >The number is <span style='color:blue'> even </span> for " + result + "<h1>" );
+		 }else{
+			console.log("odd");
+			document.writeln( "<h1 class='text-center' >The number is <span style='color:yellow'> odd </span> for " + result + "<h1>" );
+		 }
+
+      </script>
+   </head>
+   <body>
+   	
+   </body>
+</html>

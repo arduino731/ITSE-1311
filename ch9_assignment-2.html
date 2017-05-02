@@ -1,0 +1,93 @@
+<!-- Due Apr 10 by 11:59pm  Points 100  Submitting a text entry box or a file upload Available after Mar 21 at 7am
+Question 9.21 on Page 321.
+
+
+Write a script that simulates coin tossing. Let the program toss the coin each time the user clicks the Toss button. 
+Count the number of times each side of the coin appears. Display the results.
+
+The program should call a separate function flip that takes no arguments and returns false for tails and true for heads. 
+[Note: If the program realistically simulates the coin tossing, each side of the coin should appear approximately half the time.] -->
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Simulates coin tossing</title>
+      <style type = "text/css">
+         p { margin: 0; }
+         .coinImg{
+            width: 200px;
+            height: 200px;
+         }
+      </style>
+
+<script>
+
+alert("you only have one chance to toss coin");
+
+function start(){
+  var button = document.getElementById( "tossButton" );
+  button.addEventListener( "click", coinTossing, false );
+  coin1Image = document.getElementById( "head" );
+  coin2Image = document.getElementById( "tail" );
+}                            
+
+
+function coinTossing(){
+
+  var result = document.getElementById( "result" );
+  var count = Math.floor(1+ Math.random() * 10 );
+  console.log("each side of coin:" + count);
+
+  result.innerHTML ="Count the number of times eachs side: " + count;
+
+  var flipingHorT = Math.floor( Math.random() * 2);
+
+  for(count; count > 0;count--){
+    console.log("remain turned coin:" + count);
+    if(count % 2 == flipingHorT){ // fliping sometime 0 or 1 
+        console.log("head");
+      }else{
+        console.log("tail");
+    }
+    if(count === 1){
+      console.log("answer coin is:");
+      if(count % 2 == flipingHorT){ // fliping sometime 0 or 1 
+        console.log("head");
+        coin1Image.setAttribute( "src", "coin1.jpg" )
+      }else{
+        console.log("tail");
+        coin2Image.setAttribute( "src", "coin2.jpg" ); 
+      }
+    }
+  }
+
+}  
+
+
+window.addEventListener( "load", start, false );
+</script>
+
+
+
+   </head>
+	<body>
+	  <h1>Simulates coin tossing
+      <h1 id = "result"></h1> 
+    </h1>
+	  <hr>
+      <form action = "#" style="text-align:center;">
+         <input id = "tossButton" type = "button" value = "Toss Button">
+      </form>
+      <table style="margin:auto;">
+        <tr>
+          <th>Head</th>
+          <th>Tail</th>
+        </tr>
+        <tr>
+          <td><img class="coinImg" id = "head" src = "blank.png" alt = "blank image"></td>
+          <td><img class="coinImg" id = "tail" src = "blank.png" alt = "blank image"></td>
+        </tr>
+      </table>
+	</body>
+</html>

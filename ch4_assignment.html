@@ -1,0 +1,74 @@
+<!-- 
+4.8 Add an embedded style sheet to the HTML5 document in Fig. 2.3. The style sheet should contain a rule that displays h1 elements in blue. In addition, create a rule that displays all links in blue without underlining them. When the mouse hovers over a link, change the link’s background color to yellow.
+
+<!DOCTYPE html>
+
+<!-- Embedded style sheets. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Embedded Style Sheet</title>
+
+      <!-- this begins the style sheet section -->
+      <style type = "text/css">
+         body {
+         	background-color: burlywood;
+         }
+         .center{ 
+             text-align:center;
+         }
+         em       { font-weight: bold;
+                    color: blue; }   
+         h1       { font-family: tahoma, helvetica, sans-serif; }
+         h1.blue { color:blue;}
+         p        { font-size: 12pt;
+                    font-family: arial, sans-serif; }
+         a {text-decoration: none; color:blue;}
+         a:link{
+         	color:blue;
+         }
+
+         a:visited {
+         	color:white;
+         }
+         a:hover {
+         	background-color:yellow;
+         	color:black;
+         	font-size: 0.9em
+         }
+         a:active {
+         	color:red;
+         	font-size: 1.5em;
+         }
+      </style>
+   </head>
+   <body>
+		<div class="center">
+      <h1 class="blue"><em>Here are my favorite sites:</em></h1>
+      <p><strong>Click a name to visit that site.</strong></p>
+
+      <p><a href = "http://www.facebook1.com" target="_blank">Facebook1</a></p>
+      <p><a href = "http://www.facebook2.com" target="_blank">Facebook2</a></p>
+      <p><a href = "http://www.facebook3.com" target="_blank">Facebook3</a></p>
+      <p><a href = "http://www.twitter1.com" target="_blank">Twitter1</a></p>
+      <p><a href = "http://www.twitter.com" target="_blank">Twitter2</a></p>
+      <p><a href = "http://www.twitter.com" target="_blank">Twitter3</a></p>
+      <p><a href = "http://www.fourquare.com" target="_blank">Foursquare</a></p>
+      <p><a href = "http://www.google.com" target="_blank">Google</a></p>
+      <p><a href = "http://www.google3.com" target="_blank">Google3</a></p>
+
+		</div>
+
+		<ul>
+	  		<li><p> <span style="color:blue">blue </span> unvisited link (link)</p></li>
+
+			<li><p> <span style="color:white">white </span> visited link (link)</p></li>
+
+      		<li><p> <span style="color:yellow">yellow </span>background yellow mouse over link (hover)</p></li>
+
+
+      		<li><p><span style="color:red">red </span> selected link (active) work well on mobile too</p></li>
+  		</ul>
+
+   </body>
+</html>

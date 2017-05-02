@@ -1,0 +1,67 @@
+<!-- 
+5.9 (Animation) Create an infinite animation of an element moving in a square pattern.
+
+ -->
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Animation</title>
+      <style type = "text/css">
+         img
+         {
+            position: relative;
+            -webkit-animation: movingimage 5s infinite;
+            -moz-animation: movingimage 5s infinite;
+            animation: movingimage 5s infinite;
+         }
+         .createH1{
+            background:red;
+            text-align: center;
+            border-radius: 5px;
+         }
+         .yellowBox{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 0px;
+            border-radius: 0px 0px 0px 0px;
+            border: 1px solid #FACD38;
+            left:25%;
+         }
+         @-webkit-keyframes movingimage 
+         {
+             0% {left: 0px; top: 0px;}
+             25% {left: 200px; top:0px;}
+             50% {left: 200px; top: 200px;}
+             75% {left: 0px; top: 200px;}
+             100% {left: 0px; top: 0px;}
+         }
+         @-moz-keyframes movingimage 
+         {
+            0% {left: 0px; top: 0px;}
+            25% {left: 200px; top:0px;}
+            50% {left: 200px; top: 200px;}
+            75% {left: 0px; top: 200px;}
+            100% {left:0px; top: 0px;}
+         }
+         @keyframes movingimage
+         {
+            0% {left: 0px; top: 0px;}
+            25% {left: 200px; top:0px;}
+            50% {left: 200px; top: 200px;}
+            75% {left: 0px; top: 200px;}
+            100% {left:0px; top: 0px;}
+         }
+      </style>
+   </head>
+   <body>
+      <h1 class="createH1">(Animation) Create an infinite animation of an element moving in a square pattern.</h1>
+      <div style="text-align:center; display:block;">
+      <div style="background:black; left:1px;top:100px; position:absolute; height:400px;">
+         <div class="yellowBox"></div>
+         <img src = "http://imgur.com/r7fOouN.jpg" width = "50%" height = "50%" alt = "Java How to Program book cover">
+      </div>
+      </div>
+   </body>
+</html>

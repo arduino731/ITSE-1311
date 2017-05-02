@@ -1,0 +1,68 @@
+<!-- Chapter 8 Assignment - I
+ Submit Assignment
+Due Mar 20 by 11:59pm  Points 100  Submitting a file upload Available after Feb 20 at 7am
+Question 8.6 on Page 276.
+
+Write a script that finds the smallest of several nonnegative integers. Assume that the first
+value read specifies the number of values to be input from the user. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Smallest Integer </title>
+		<style>
+		h1.line{
+			text-decoration: line-through;
+		}
+		</style>
+	</head>
+	<body style="text-align: center;">
+	<h1 >Looking For Smallest Integer</h1>
+	<hr />
+
+	<script type="text/javascript">
+		var inputNumber;
+		var i;
+		var add = 0;
+		var value;
+		inputNumber = window.prompt("How many inputs you wish to enter:");
+		var count = parseInt(inputNumber, 10 );
+		var myarray = new Array(count); 
+
+		for ( i = 0; i < count; i++) {
+			myarray[i] = window.prompt("Enter any number:");
+			value = myarray[i];
+			console.log(value);
+		}
+
+		for( i=0; i < count; i++){
+			if(value < 0){ // if user inputs under zero number automatic to zero number
+				document.writeln( "<h1> Smallest of all input numbers is: " + value + "</h1><br>" );
+				value = 0;
+				document.writeln( "<h1 style='color:red;'> Please input at least zero number </h1><br>" );
+			}
+
+			console.log("value: " + value); // lastest user inputs number
+			console.log("number for parseInt: " + parseInt(myarray[i])); // start array at 0
+
+			if(parseInt(myarray[i]) <= value){
+					value = myarray[i];
+					console.log("change value to: " + value);
+					console.log("lowest number is: " + parseInt(myarray[i]));
+					
+					add = add + 1;
+					console.log(add);
+
+					if(add >= 1){
+						document.writeln( "<h1 class='line'>" + value + " </h1>" );
+					}
+
+			}
+		}
+		document.writeln( "<h1> Smallest of all input numbers is: " + value + "</h1><br>" );
+		document.writeln( "<p>Press F5 or Refresh to load script again.</p>")
+
+
+	</script>
+	</body>
+</html>

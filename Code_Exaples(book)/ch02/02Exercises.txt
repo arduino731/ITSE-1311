@@ -1,0 +1,48 @@
+Exercises 
+2.3 Use HTML5 to create a document that contains the following text: Internet and World Wide Web How to Program: Fifth Edition Welcome to the world of Internet programming. We have provided coverage for many Internet-related topics. Use h1 for the title (the first line of text), p for text (the second and third lines of text). Insert a horizontal rule between the h1 element and the p element. Open your new document in a web browser to view the marked-up document.
+
+2.4 An image named deitel.png is 200 pixels wide and 150 pixels high. Write an HTML5 statement using the width and height attributes of the img element to perform each of the following transformations: a) Increase the size of the image by 100 percent. b) Increase the size of the image by 50 percent. c) Change the width-to-height ratio to 2:1, keeping the width attained in part (a). 
+
+2.5 Create a link to each of the following:
+a) The file index.html, located in the files directory. 
+b) The file index.html, located in the text subdirectory of the files directory. 
+c) The file index.html, located in the other directory in your parent directory. [Hint:.. signifies parent directory.] 
+d) The President’s e-mail address (president@whitehouse.gov). 
+e) The file named README in the pub directory of ftp.cdrom.com. [Hint: Use ftp://.] 
+
+2.6 Create an HTML5 document containing an ordered list of three items—ice cream, soft serve and frozen yogurt. Each ordered list should contain a nested, unordered list of your favorite flavors. Provide three flavors in each unordered list. 
+
+2.7 Create an HTML5 document that uses an image as an e-mail link. Use attribute alt to provide a description of the image and link. 
+
+2.8 Create an HTML5 document that contains links to your five favorite daily deals websites (possibly Groupon, Living Social, etc.). Your page should contain the heading “My Favorite Daily Deals Web Sites.” Click on each of these links to test your page.
+
+2.9 Create an HTML5 document that contains an unordered list with links to all the examples presented in this chapter. [Hint: Place all the chapter examples in an examples directory, then link to the files in that directory.] 
+
+2.10 Identify each of the following HTML5 items as either an element or an attribute: 
+a) html 
+b) width 
+c) href 
+d) br 
+e) h3
+
+f) a 
+g) src 
+
+2.11 State which of the following statements are true and which are false. If false, explain why. 
+a) A valid HTML5 document cannot contain uppercase letters in element names. 
+b) HTML5 documents can have the file extension .htm.
+c) &less; is the character entity reference for the less-than (<) character.
+d) In a valid HTML5 document, <li> can be nested inside either <ol> or <ul> tags.
+
+ 2.12 Fill in the blanks in each of the following: 
+a) HTML5 comments begin with <!-- and end with .
+b) In HTML5, attribute values can be enclosed in . 
+c) is the character entity reference for an ampersand. 
+d) Element can be used to make text bold. 
+
+2.13 Categorize each of the following as an element or an attribute: 
+a) width b) td c) th d) name e) select f) type 
+
+
+
+

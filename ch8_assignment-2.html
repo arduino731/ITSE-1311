@@ -1,0 +1,87 @@
+<!-- Question 8.11 on Page 276.
+
+A mail-order house sells five different products ...
+
+8.11 A mail-order house sells five different products whose retail prices are as follows: 
+product 1, $2.98; 
+product 2, $4.50; 
+product 3, $9.98; 
+product 4, $4.49; 
+product 5, $6.87.
+
+ Write a script that reads a series of pairs of numbers as follows: 
+ a) Product number
+ b) Quantity sold for one day
+
+ Your program should use a switch statement to determine each product’s retail price and should calculate and output HTML5 that displays the total retail value of all the products sold last week. Use a prompt dialog to obtain the product number and quantity from the user. Use a sentinel-controlled loop to determine when the program should stop looping and display the final results. -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Sells Five Products </title>
+		<style>
+
+		</style>
+	</head>
+	<body style="text-align: center;">
+	<h1 >A mail-order house sells five different products</h1>
+	<hr />
+
+	<script type="text/javascript">
+
+		var sum = 0;
+		var number;
+		var quantity;
+		var inputString;
+		var cost = 0;
+
+		while (number != 0)
+		{
+			inputString = prompt("Enter product number (-1 or 0 to exit): product 1, $2.98; product 2, $4.50; product 3, $9.98; product 4, $4.49; product 5, $6.87. ");
+
+			number = parseInt(inputString, 10);
+			if(number >= 1){
+				quantity = prompt("quantity sold");
+				quantity = parseInt(quantity, 10);
+			}
+
+			switch (number)
+			{
+			case 1:
+				sum += 2.98 * quantity;
+				document.write("<h1>product 1 total is $" + sum + "</h1>");
+				cost = cost + sum
+				console.log(cost);
+				break;
+			case 2:
+				sum += 4.50 * quantity;
+				document.write("<h1>product 2 total is $" + sum + "</h1>");
+				cost = cost + sum;
+				console.log(cost);
+				break;
+			case 3:
+				sum += 9.98 * quantity;
+				document.write("<h1>product 3 total is $" + sum + "</h1>");
+				cost = cost + sum;
+				console.log(cost);
+				break;
+			case 4:
+				sum += 4.49 * quantity;
+				document.write("<h1>product 4 total is $" + sum + "</h1>");
+				cost = cost + sum;
+				console.log(cost);
+				break;
+			case 5:
+				sum += 6.87 * quantity;
+				document.write("<h1>product 5 total is $" + sum + "</h1>");
+				cost = cost + sum;
+				console.log(cost);
+				break;
+			}
+		}
+		document.writeln( "<h1> Total value is $" + cost + "</h1><br>" );
+
+	</script>
+	</body>
+</html>

@@ -1,0 +1,128 @@
+<!-- Use a one-dimensional array to solve the following problem: 
+A company pays its salespeople on a commission basis. The salespeople receive $200 per week plus 9 percent of their gross sales for that week. For example, a salesperson who grosses $5000 in sales in a week receives $200 plus 9 percent of $5000, or a total of $650. Write a script (using an array of counters) that obtains the gross sales for each employee through an HTML5 form and determines how many of the salespeople earned salaries in each of the following ranges (assume that each salesperson’s salary is truncated to an integer amount): 
+a) $200–299 
+b) $300–399 
+c) $400–499
+d) $500–599
+e) $600–699 
+f) $700–799 
+g) $800–899 
+h) $900–999 
+i) $1000 and over -->
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Maximum of Three Values</title>
+		<style type = "text/css">
+			p { margin: 0; }
+		</style>
+	</head>
+	<script type="text/javascript">
+
+		var count = [0,0,0,0,0,0,0,0,0];
+		var number;
+		var sales = 0;
+		var salary = 0;
+		var add = 200;
+		var add2 = 299;
+
+		function start(){
+			while(number != 0){
+				sales = prompt("Enter an employee's weekly sales (0 to exit):");
+				number = parseInt(sales);
+				if(number == 0){
+					salary = 0;
+					x = Math.floor(salary/100);
+				}
+				else{
+					salary = 200 + number * 0.09;
+					x = Math.floor(salary/100);
+					
+					console.log("salary: " + salary);
+					console.log("x: " + x);
+				}
+				if(x == 2){
+					count[0]++;
+					console.log(count[0]); // 1,2,3
+					console.log(count); // [0,0,0,1,2,0..]
+					// document.writeln( "<h1> $200-$299: " + count[0]+ "</h1>" );
+				}
+				else if(x == 3){
+					count[1]++;
+					console.log(count[1]); // 1,2,3
+					console.log(count); // [0,0,0,1,2,0..]
+					// document.writeln( "<h1> $300-$399: " + count[1]+ "</h1>" );
+				}
+				else if(x == 4){
+					count[2]++;
+					console.log(count[2]); // 1,2,3
+					console.log(count); // [0,0,0,1,2,0..]
+					// document.writeln( "<h1> $400-$499: " + count[2]+ "</h1>" );
+				}
+				else if(x == 5){
+					count[3]++;
+					console.log(count[3]); // 1,2,3
+					console.log(count); // [0,0,0,1,2,0..]
+					// document.writeln( "<h1> $500-$599: " + count[3]+ "</h1>" );
+				}
+				else if(x == 6){
+					count[4]++;
+					console.log(count[4]); // 1,2,3
+					console.log(count); // [0,0,0,1,2,0..]
+					// document.writeln( "<h1> $600-$699: " + count[4]+ "</h1>" );
+				}
+				else if(x == 7){
+					count[5]++;
+					console.log(count[5]); // 1,2,3
+					console.log(count); // [0,0,0,1,2,0..]
+					// document.writeln( "<h1> $700-$799: " + count[5]+ "</h1>" );
+
+				}
+				else if(x == 8){
+					count[6]++;
+					console.log(count[6]); // 1,2,3
+					console.log(count); // [0,0,0,1,2,0..]
+				}
+				else if(x == 9){
+					count[7]++;
+					console.log(count[7]); // 1,2,3
+					console.log(count); // [0,0,0,1,2,0..]
+				}
+				else if(x >= 10){
+					count[8]++;
+					console.log(count[8]); // 1,2,3
+					console.log(count); // [0,0,0,1,2,0..]
+				}
+				else{
+					console.log('Hi');
+				}
+			}
+
+			for(i = 0; i <= count.length; i++){
+				
+				// console.log(add);
+				// console.log(add2);
+				if(add <= 999){
+					document.writeln( "<h1> $" + add + "-$" + add2 + " : " + count[i]+ "</h1>" );
+					add = add + 100;
+					add2 = add2 + 100;
+				}
+				else{
+					document.writeln( "<h1> $1000 and over. : " + count[8]+ "</h1>" );
+					console.log("hi " + count[8]);
+
+				}
+				
+			}
+
+		}
+
+	</script>	
+ 	<body>		
+		<h1>Employees in salary range:</h1>
+		<input type="button" value="Start" onclick = "start()">
+	</body>
+</html>
